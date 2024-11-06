@@ -1,0 +1,28 @@
+titre : "Compétences"
+
+languages-prog: 
+    - nom: PPYTHON
+      duree-apprentissage: 4
+      unite: ans
+      niveau: 7/10
+    - nom: HTML
+      duree-apprentissage: 3
+      unite: ans
+      niveau: 8/10
+    - nom: CSS
+      duree-apprentissage: 3
+      unite: ans
+      niveau: 7/10
+    - nom: JAVASCRIPT
+      duree-apprentissage: 4
+      unite: mois
+      niveau: 6/10
+    - nom: PHP
+      duree-apprentissage: 2
+      unite: mois
+      niveau: 5/10
+    - nom: YAML
+      duree-apprentissage: 2
+      unite: mois
+      niveau: 9/10
+
