@@ -1,7 +1,7 @@
 titre : "Compétences"
 
 languages-prog: 
-    - nom: PPYTHON
+    - nom: PYTHON
       duree-apprentissage: 4
       unite: ans
       niveau: 7/10
