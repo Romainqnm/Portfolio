@@ -26,3 +26,17 @@ languages-prog:
       unite: mois
       niveau: 9/10
 
+langues:
+    - nom: Français
+      duree-apprentissage: Langue Maternelle
+      unite: ans
+      niveau: 10/10
+    - nom: Anglais
+      duree-apprentissage: 9
+      unite: ans
+      niveau: 9/10
+    - nom: Espagnol
+      duree-apprentissage: 5
+      unite: ans
+      niveau: 6/10
+
