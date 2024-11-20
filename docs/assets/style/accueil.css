@@ -10,6 +10,19 @@ body {
     color: #333;
 }
 
+p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #333;
+    margin-left: 2.5%;
+    font-weight: bold;
+}
+
+li{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #333;
+    margin-left: 5%;
+    font-weight: bold;
+}
 header {
     background: #333;
     color: #fff;
@@ -29,7 +42,7 @@ nav ul {
 }
 
 nav a {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
 }
 
