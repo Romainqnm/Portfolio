@@ -20,9 +20,20 @@ Fromations/Ecoles:
 
 Stages/Experiences Professionnelles:
     - type-d-experience: Stage
-      année:
-      durée:
-      nom-fonction: 
+      année: 2020
+      durée: Une semaine
+      nom-fonction: Fabrication de prothèses en atelier
       entreprise: PROTEOR
-      descriptif:
-    
+      descriptif: Suivi du processus de production d'appreillages orthopédiques dans un atelier. Ce stage m'a permis de développer mon travail en équipe, ma coordination et ma précision manuelle.
+    - type-d-experience: Stage
+      année: 2021
+      durée: Une semaine
+      nom-fonction: Assistance du chef de rayon
+      entreprise: LECLERC
+      descriptif: Gestion de l'ensemble du rayon informatique. Conseils à la clientèle, gestion des stocks, service après-vente, agencement/optimisation des rayons. Ce stage a été une opportunité d'améliorer mon organisation, ma rigueur.  
+    - type-d-experience: Projet Professionnel
+      année: 2023
+      durée: Plusieurs mois
+      nom-fonction: Monteur & Cadreur 
+      entreprise: Cinéma LUX
+      descriptif: Projet de fin d'année enre amis, je me suis chargé de la majorité du montage du film "L'Empire de l'Ombre" sur Premiere Pro et After Effects ainsi que une partie du cadrage ou de la gestion des acteurs lors des tournages. Cette expéreience m'a permise de découvrir de nouveaux outils informatiques pour la réalisation du projet.
