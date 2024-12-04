@@ -1,4 +1,8 @@
 titre: "Réalisations"
 
 realisation-scolaire: 
-    - 
+    - type-realisation: Travaux Dirigés en programmation WEB
+      matière: SLAM
+      nom-realisation: Repository - Productions réalisées en Bloc 1 - SLAM
+      description: Suite de TD présentés dans les GitHub Pages, réalisés en langages (html,css,js,php,sql,...)
+      
