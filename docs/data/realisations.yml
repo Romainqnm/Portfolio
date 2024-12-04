@@ -4,5 +4,10 @@ realisation-scolaire:
     - type-realisation: Travaux Dirigés en programmation WEB
       matière: SLAM
       nom-realisation: Repository - Productions réalisées en Bloc 1 - SLAM
-      description: Suite de TD présentés dans les GitHub Pages, réalisés en langages (html,css,js,php,sql,...)
+      description: Suite de TDs présentés dans les GitHub Pages, réalisés en langages (html,css,js,php,sql,...)
+
+    - type-realisation: Procédure
+      matière: SISR
+      nom-realisation: Installation & Configuration WEB Apache2
+      description: Ma première prodcédure aboutie, elle présente les étapes d'intstallation et de configuration du service apache 2 sur une machine Linux. Elle présente les prérequis à la configuration du service, puis la création de deux site distincs à l'aide de trois méthodes différentes.
       
