@@ -1,28 +1,57 @@
 titre : "Cursus Scolaire & Professionnel"
 
-Fromations/Ecoles: 
+Formation: 
     - établissement: Etablissement Saint Joseph
       période-apprentissage: 2016 – 2019
       diplome: Brevet des Collèges
       lieu: Caen, France
+      description: Formation généraliste incluant les bases en mathématiques, français, sciences, et histoire-géographie. Introduction à l'informatique via des projets scolaires et participation à des activités culturelles. 
     - établissement: Lycée Jeanne d'Arc
       période-apprentissage: 2019 – 2023
       diplome: Baccalauréat Général (Spé. SES & NSI)
       lieu: Caen, France
+      description: |
+        - Spécialité NSI (Numérique et Sciences Informatiques) : apprentissage de la programmation, algorithmes, bases de données, et réseaux.
+        - Spécialité SES (Sciences Économiques et Sociales) : analyse des dynamiques économiques, sociales et politiques.
+        - Projet principal : création d'un mini-site web dans le cadre de NSI.
+        - Développement de compétences en travail d'équipe et gestion de projets.                                                             
     - établissement: Lycée Jean Rostand
       période-apprentissage: 2023 – 2024
       diplome: BTS Compabilité & Gestion (non-obtenu)
       lieu: Caen, France
+      description : Étude approfondie des principes de gestion comptable, analyse financière et outils bureautiques (Excel, logiciel comptable).
+        Compétences développées :
+        - Rigueur dans le traitement des données.
+        - Initiation à la gestion d'entreprise et à l'organisation administrative.
     - établissement: CaenSup Sainte Ursule
       période-apprentissage: 2024 - Maintenant
       diplome: BTS Service Informatique aux Organisations
       lieu: Caen, France
-
-Stages/Experiences Professionnelles:
+      description: |
+        - Développement en Python, PHP, HTML, CSS, JavaScript, et manipulation des bases de données.
+        - Conception, mise en œuvre et maintenance de réseaux informatiques :
+          * Configuration de serveurs (Windows Server, Linux).
+          * Mise en place de VLAN, routage, et surveillance réseau.
+          * Sécurisation des systèmes et gestion des droits d'accès.
+        - Gestion de projets informatiques et méthodologies de travail.
+        - Création de sites web dynamiques et intégration de systèmes sécurisés.
+        - Collaboration avec des équipes pour des projets pratiques et simulations professionnelles.
+ExperiencePro:
     - type-d-experience: Stage
-      année:
-      durée:
-      nom-fonction: 
+      année: 2020
+      durée: Une semaine
+      nom-fonction: Fabrication de prothèses en atelier
       entreprise: PROTEOR
-      descriptif:
-    
+      descriptif: Suivi du processus de production d'appreillages orthopédiques dans un atelier. Ce stage m'a permis de développer mon travail en équipe, ma coordination et ma précision manuelle.
+    - type-d-experience: Stage
+      année: 2021
+      durée: Une semaine
+      nom-fonction: Assistance du chef de rayon
+      entreprise: LECLERC
+      descriptif: Gestion de l'ensemble du rayon informatique. Conseils à la clientèle, gestion des stocks, service après-vente, agencement/optimisation des rayons. Ce stage a été une opportunité d'améliorer mon organisation, ma rigueur.  
+    - type-d-experience: Projet Professionnel
+      année: 2023
+      durée: Plusieurs mois
+      nom-fonction: Monteur & Cadreur 
+      entreprise: Cinéma LUX
+      descriptif: Projet de fin d'année enre amis, je me suis chargé de la majorité du montage du film "L'Empire de l'Ombre" sur Premiere Pro et After Effects ainsi que une partie du cadrage ou de la gestion des acteurs lors des tournages. Cette expéreience m'a permise de découvrir de nouveaux outils informatiques pour la réalisation du projet.
