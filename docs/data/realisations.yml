@@ -11,10 +11,15 @@ realisation-scolaire:
       nom-realisation: Installation & Configuration WEB Apache2
       description: Ma première prodcédure aboutie, elle présente les étapes d'intstallation et de configuration du service apache 2 sur une machine Linux. Elle présente les prérequis à la configuration du service, puis la création de deux site distincs à l'aide de trois méthodes différentes.
 
+    - type-realisation: Portfolio
+      matière: Atelier Professionnel - SLAM
+      nom-realisation: Création d'un portfolio personnel 
+      description: Ce même portfolio est une de mes réalisations. Il regroupe divers compétences, réalisations et mon cursus.
+
 realisation-loisir: 
     - type-realisation: Production Audiovisuelle
       projet: Montage et Participation à la Production de l'"Empire de l'Ombre"
-      description: Projet de fin d'année enre amis, je me suis chargé de la majorité du montage du film "L'Empire de l'Ombre" sur Premiere Pro et After Effects ainsi que une partie du cadrage ou de la gestion des acteurs lors des tournages. Cette expéreience m'a permise de découvrir de nouveaux outils informatiques pour la réalisation du projet.
+      description: Projet de fin d'année entre amis, je me suis chargé de la majorité du montage du film "L'Empire de l'Ombre" sur Premiere Pro et After Effects ainsi que une partie du cadrage ou de la gestion des acteurs lors des tournages. Cette expéreience m'a permise de découvrir de nouveaux outils informatiques pour la réalisation du projet.
 
 certifications: 
     - nom-certif: SecNum Académie
