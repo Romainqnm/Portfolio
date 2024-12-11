@@ -7,41 +7,40 @@ languages-prog:
       niveau: 7/10
       description: |
         Langage polyvalent utilisé pour le développement de scripts, d'applications web et d'automatisation.
-        Compétences clés : manipulation de données, POO, création d'API RESTful.
+        Compétences clés : manipulation de données.
     - nom: HTML
       duree-apprentissage: 3
       unite: ans
       niveau: 8/10
       description: |
         Expertise dans la structure et la sémantique des pages web.
-        Utilisation avancée pour créer des interfaces accessibles et optimisées pour le SEO.
+        Utilisation avancée pour créer des interfaces accessibles et optimisées.
     - nom: CSS
       duree-apprentissage: 3
       unite: ans
       niveau: 7/10
       description: |
-        Stylisation des interfaces utilisateur avec Flexbox, Grid Layout et animations CSS.
+        Stylisation des interfaces CSS.
         Adaptation responsive pour différents formats d'écrans.
     - nom: JAVASCRIPT
       duree-apprentissage: 4
       unite: mois
       niveau: 6/10
       description: |
-        Création d'interfaces interactives et dynamiques avec des frameworks légers.
+        Création d'interfaces interactives et dynamiques.
         Développement d'applications web côté client.
     - nom: PHP
       duree-apprentissage: 2
       unite: mois
       niveau: 5/10
       description: |
-        Développement de sites web dynamiques avec gestion de bases de données (MySQL).
-        Utilisation pour des projets académiques comme des formulaires et des systèmes CRUD.
+        Développement de sites web dynamiques avec gestion de bases de données.
     - nom: YAML
       duree-apprentissage: 2
       unite: mois
       niveau: 9/10
       description: |
-        Structuration de données hiérarchiques pour des fichiers de configuration et des outils DevOps.
+        Structuration de données hiérarchiques pour des fichiers de configuration.
 
 langues:
     - nom: Français
@@ -49,43 +48,42 @@ langues:
       unite: ans
       niveau: 10/10
       description: |
-        Maîtrise parfaite, tant à l'oral qu'à l'écrit, avec une attention particulière à la communication professionnelle.
+        Maîtrise parfaite, tant à l'oral qu'à l'écrit.
     - nom: Anglais
       duree-apprentissage: 9
       unite: ans
       niveau: 9/10
       description: |
-        Niveau avancé (C1) : lecture technique, rédaction, et communication dans un contexte professionnel.
+        Niveau avancé (C1) : lecture technique, rédaction.
     - nom: Espagnol
       duree-apprentissage: 5
       unite: ans
       niveau: 6/10
       description: |
-        Niveau intermédiaire : compréhension écrite et orale, idéal pour des interactions simples ou professionnelles.
+        Niveau intermédiaire : compréhension écrite et orale.
 
 competences-reseau:
     - domaine: Administration Système
-      niveau: Avancé
+      niveau: 7.5/10
       description: |
-        - Configuration de serveurs Linux et Windows Server.
-        - Automatisation des tâches avec des scripts Bash.
+        - Configuration de serveurs Linux.
     - domaine: Réseaux Informatiques
-      niveau: Intermédiaire
+      niveau: 8/10
       description: |
-        - Mise en place de VLAN, routage statique/dynamique.
         - Surveillance réseau avec outils comme Wireshark et Netstat.
         - Sécurisation des réseaux via des pare-feu et des politiques d'accès.
 
 autres-competences:
     - nom: Gestion de Projet
-      niveau: Avancé
+      niveau: 8/10
       description: |
-        Utilisation de méthodologies Agile (Scrum) pour organiser et planifier efficacement les tâches.
+        Utilisation de méthodologies pour organiser et planifier efficacement les tâches.
     - nom: Outils Bureautiques
-      niveau: Expert
+      niveau: 9,5/10
       description: |
         Maîtrise d'Excel (formules avancées, tableaux croisés dynamiques) et de Word.
-    - nom: Design Web
-      niveau: Intermédiaire
+    - nom: Montage Photo/Vidéo
+      niveau: 9/10
       description: |
-        Création d'interfaces attrayantes avec Figma et intégration en HTML/CSS.
+        Utilisation de divers logiciels de montage photo et vidéo, notamment Adobe Premiere Pro / Photoshop
+                
