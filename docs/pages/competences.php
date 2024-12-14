@@ -1,89 +1,43 @@
 <?php
+// Charger les données YAML
 if (!function_exists('yaml_parse_file')) {
     die("L'extension YAML n'est pas activée sur ce serveur.");
 }
 
-$competences = yaml_parse_file('competences.yaml');
+$competences = yaml_parse_file(__DIR__ . '/../data/competences.yml');
 
-if (!$competences) {
-    die("Erreur lors du chargement du fichier YAML.");
+if ($competences) {
+    echo "<h3>{$competences['titre']}</h3>";
+
+    // Section Langages de Programmation
+    echo "<h4>Langages de Programmation</h4><ul>";
+    foreach ($competences['languages-prog'] as $langage) {
+        echo "<li><strong>{$langage['nom']}</strong> ({$langage['duree-apprentissage']} {$langage['unite']}): ";
+        echo "{$langage['description']} Niveau: {$langage['niveau']}</li>";
+    }
+    echo "</ul>";
+
+    // Section Langues
+    echo "<h4>Langues</h4><ul>";
+    foreach ($competences['langues'] as $langue) {
+        echo "<li><strong>{$langue['nom']}</strong> ({$langue['duree-apprentissage']} {$langue['unite']}): ";
+        echo "{$langue['description']} Niveau: {$langue['niveau']}</li>";
+    }
+    echo "</ul>";
+
+    // Section Réseaux et Autres Compétences
+    echo "<h4>Compétences Réseau</h4><ul>";
+    foreach ($competences['competences-reseau'] as $competence) {
+        echo "<li><strong>{$competence['domaine']}</strong>: {$competence['description']} Niveau: {$competence['niveau']}</li>";
+    }
+    echo "</ul>";
+
+    echo "<h4>Autres Compétences</h4><ul>";
+    foreach ($competences['autres-competences'] as $autre) {
+        echo "<li><strong>{$autre['nom']}</strong>: {$autre['description']} Niveau: {$autre['niveau']}</li>";
+    }
+    echo "</ul>";
+} else {
+    echo "Erreur lors du chargement des données de compétences.";
 }
-
-$titre = $competences['titre'];
-$languagesProg = $competences['languages-prog'];
-$langues = $competences['langues'];
 ?>
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= htmlspecialchars($titre) ?></title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-        }
-        h1, h2 {
-            color: #333;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
-        th {
-            background-color: #f4f4f4;
-        }
-    </style>
-</head>
-<body>
-    <h1><?= htmlspecialchars($titre) ?></h1>
-
-    <h2>Langages de Programmation</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Nom</th>
-                <th>Durée d'Apprentissage</th>
-                <th>Niveau</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php foreach ($languagesProg as $langage): ?>
-                <tr>
-                    <td><?= htmlspecialchars($langage['nom']) ?></td>
-                    <td><?= htmlspecialchars($langage['duree-apprentissage']) ?> <?= htmlspecialchars($langage['unite']) ?></td>
-                    <td><?= htmlspecialchars($langage['niveau']) ?></td>
-                </tr>
-            <?php endforeach; ?>
-        </tbody>
-    </table>
-
-    <h2>Langues</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Nom</th>
-                <th>Durée d'Apprentissage</th>
-                <th>Niveau</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php foreach ($langues as $langue): ?>
-                <tr>
-                    <td><?= htmlspecialchars($langue['nom']) ?></td>
-                    <td><?= htmlspecialchars($langue['duree-apprentissage']) ?> <?= htmlspecialchars($langue['unite']) ?></td>
-                    <td><?= htmlspecialchars($langue['niveau']) ?></td>
-                </tr>
-            <?php endforeach; ?>
-        </tbody>
-    </table>
-</body>
-</html>
