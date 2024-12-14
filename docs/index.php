@@ -50,23 +50,11 @@
     <?php include 'pages/formation.php'; ?>
 </section>
 
-<section id="contact" class="section">
+<section id="contact">
     <h2>Contact</h2>
-    <form action="pages/traitement_contact.php" method="POST">
-        <label for="nom">Nom :</label>
-        <input type="text" id="nom" name="nom" required>
-
-        <label for="email">Email :</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="objet">Objet du message :</label>
-        <input type="text" id="objet" name="objet" required>
-
-        <label for="message">Message :</label>
-        <textarea id="message" name="message" required></textarea>
-
-        <button type="submit">Envoyer</button>
-    </form>
+    <?php include 'pages/contact.php'; ?>
 </section>
+
+
 </body>
 </html>
