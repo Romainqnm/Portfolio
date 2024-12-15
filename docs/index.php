@@ -44,22 +44,22 @@
 <!-- Sections dynamiques -->
 <section id="competences" class="section">
     <h2>Compétences</h2>
-    <?php include 'pages/competences.php'; ?>
+    <?php include 'pages/php/competences.php'; ?>
 </section>
 
 <section id="realisations" class="section">
     <h2>Réalisations</h2>
-    <?php include 'pages/realisations.php'; ?>
+    <?php include 'pages/php/realisations.php'; ?>
 </section>
 
 <section id="formation" class="section">
     <h2>Formation</h2>
-    <?php include 'pages/formation.php'; ?>
+    <?php include 'pages/php/formation.php'; ?>
 </section>
 
 <section id="contact" class="section">
     <h2>Contact</h2>
-    <?php include 'pages/contact.php'; ?>
+    <?php include 'pages/php/contact.php'; ?>
 </section>
 
 <!-- Pied de page -->

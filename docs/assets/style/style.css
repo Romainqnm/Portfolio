@@ -8,14 +8,14 @@
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
-    background: #f4f4f4;
-    color: #333;
+    background: #383838;
+    color: #9889ee;
 }
 
 /* En-tête */
 header {
-    background: #004DFF;
-    color: white;
+    background: #2a15ee;
+    color: rgba(65, 65, 65, 0.185);
     text-align: center;
     padding: 1rem 2rem;
     position: fixed;
@@ -23,6 +23,11 @@ header {
     top: 0;
     left: 0;
     z-index: 1000;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    color: #e2ddff; 
 }
 
 header h1 {
