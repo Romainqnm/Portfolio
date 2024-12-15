@@ -1,68 +1,160 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background: #f4f4f4;
+    color: #333;
+}
+
+/* En-tête */
 header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: #333;
+    background: #004DFF;
     color: white;
-    padding: 10px 20px;
-    z-index: 1000;
     text-align: center;
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
 header h1 {
-    margin: 0;
-    font-size: 24px;
+    font-size: 2.5rem;
+    font-weight: 700;
 }
 
 nav ul {
     list-style: none;
-    padding: 0;
     display: flex;
     justify-content: center;
-    margin: 10px 0 0;
+    gap: 1.5rem;
 }
 
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
+nav a {
     color: white;
     text-decoration: none;
-    font-size: 16px;
-    transition: color 0.3s ease;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: color 0.3s;
 }
 
-nav ul li a:hover {
+nav a:hover {
     color: #FFA500;
 }
 
-.section {
-    padding: 100px 20px 20px;
-    max-width: 800px;
-    margin: 100px auto;
-    font-family: Arial, sans-serif;
-}
-
-#contact form {
+/* Section d'accueil */
+.hero {
+    background: url('assets/pictures/romain.jpg') no-repeat center center/cover;
+    height: 100vh;
     display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-input, textarea, button {
-    padding: 10px;
-    font-size: 16px;
-}
-
-button {
-    background: #333;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     color: white;
-    border: none;
-    cursor: pointer;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.hero-text {
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+.cta-btn {
+    padding: 0.8rem 2rem;
+    font-size: 1.2rem;
+    background: #FFA500;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
     transition: background 0.3s ease;
 }
 
-button:hover {
+.cta-btn:hover {
+    background: #e67e00;
+}
+
+/* Style de l'image */
+.hero-image img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 5px solid white;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-image img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+.cta-btn {
+    padding: 0.8rem 2rem;
+    font-size: 1.2rem;
     background: #FFA500;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.cta-btn:hover {
+    background: #e67e00;
+}
+
+/* Sections générales */
+.section {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+/* Pied de page */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
