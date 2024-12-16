@@ -24,20 +24,6 @@
     </nav>
 </header>
 
-<!-- En-tête avec menu fixe -->
-<header>
-    <h1>Bienvenue sur mon Portfolio !</h1>
-    <nav>
-        <ul>
-            <li><a href="#accueil">Accueil</a></li>
-            <li><a href="#competences">Compétences</a></li>
-            <li><a href="#realisations">Réalisations</a></li>
-            <li><a href="#formation">Formation</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-</header>
-
 <section id="accueil" class="hero">
     <div class="hero-content">
         <div class="hero-text">
