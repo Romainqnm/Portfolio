@@ -44,14 +44,6 @@
 </section>
 
 
-        <!-- Image de présentation -->
-        <div class="hero-image">
-            <img src="assets/pictures/romain.jpg" alt="Photo de Romain">
-        </div>
-    </div>
-</section>
-
-
 
 <!-- Sections dynamiques -->
 <section id="competences" class="section">
