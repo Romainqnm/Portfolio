@@ -27,10 +27,22 @@
 <section id="accueil" class="hero">
     <div class="hero-content">
         <div class="hero-text">
-            <h2>Etudiant en BTS SIO</h2>
-            <p>Passionné par les technologies de l'information, j'aime créer des solutions numériques modernes.</p>
+            <h2>Bienvenue sur mon portfolio professionnel</h2>
+            <p>Je suis <strong>Romain</strong>, étudiant en <strong>BTS SIO</strong> (*Services Informatiques aux Organisations*), une formation qui me permet d'explorer deux domaines essentiels du monde informatique :</p>
+            <ul>
+                <li><strong>SLAM</strong> - Solutions Logicielles et Applications Métiers : développement d'applications, sites web et gestion de bases de données.</li>
+                <li><strong>SISR</strong> - Solutions d'Infrastructure, Systèmes et Réseaux : administration, configuration et sécurisation des systèmes et réseaux.</li>
+            </ul>
+            <p>Passionné par l'informatique, je conçois des <strong>solutions web modernes</strong> avec des langages comme <em>PHP, HTML, CSS, JavaScript</em> et manipule des bases de données en <em>SQL</em>. Parallèlement, j'acquiers des compétences en gestion d’infrastructures réseau et systèmes.</p>
+            <p>Je vous invite à explorer mon univers, découvrir mes réalisations et me contacter pour échanger ensemble.</p>
             <a href="#competences" class="cta-btn">Découvrir mes compétences</a>
+            </div>
+        <div class="hero-image">
+            <img src="assets/pictures/romain.jpg" alt="Photo de Romain">
         </div>
+    </div>
+</section>
+
 
         <!-- Image de présentation -->
         <div class="hero-image">
