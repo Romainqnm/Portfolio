@@ -102,18 +102,28 @@ nav a:hover {
 }
 
 /* Style de l'image */
-.hero-image img {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    border: 5px solid white;
-    object-fit: cover;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.hero-content {
+    display: flex; /* Active Flexbox pour organiser les éléments */
+    align-items: center; /* Centre le texte et l'image verticalement */
+    justify-content: space-between; /* Espace entre le texte et l'image */
+    flex-wrap: wrap; /* Permet le retour à la ligne si l'écran est petit */
 }
 
-.hero-image img:hover {
-    transform: scale(1.1);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+.hero-text {
+    flex: 1; /* Le texte prend 1 portion de l'espace */
+    padding: 20px;
+}
+
+.hero-image {
+    flex: 1; /* L'image prend 1 portion de l'espace */
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    max-width: 300px; /* Taille maximale de l'image */
+    height: auto; /* Garde le ratio de l'image */
+    border-radius: 10px; /* Arrondit légèrement les bords */
 }
 
 
@@ -161,5 +171,16 @@ footer {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column; /* Empile le texte et l'image */
+        text-align: center; /* Centre le texte */
+    }
+
+    .hero-image img {
+        max-width: 200px; /* Réduit la taille de l'image sur mobile */
     }
 }
