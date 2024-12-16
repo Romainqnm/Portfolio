@@ -1,19 +1,33 @@
 <?php
-require_once __DIR__ . '../../yml/vendor/autoload.php';
+require_once __DIR__ . '../../vendor/autoload.php';
 use Symfony\Component\Yaml\Yaml;
 
 try {
-    $data = Yaml::parseFile(__DIR__ . '/../yml/competences.yml');
-    echo '<section id="competences">';
-    echo '<h2>Compétences</h2>';
-    foreach ($data['competences'] as $competence) {
-        echo '<div>';
-        echo '<h3>' . htmlspecialchars($competence['titre']) . '</h3>';
-        echo '<p>' . htmlspecialchars($competence['description']) . '</p>';
-        echo '</div>';
+    $yamlFile = realpath(__DIR__ . '../yml/competences.yml');
+    if (!$yamlFile) {
+        throw new Exception('Fichier YAML introuvable.');
     }
-    echo '</section>';
+
+    $data = Yaml::parseFile($yamlFile);
+
+    function afficherSection($titre, $competences) {
+        echo "<section id='$titre'>";
+        echo "<h2>" . htmlspecialchars($titre) . "</h2>";
+        foreach ($competences as $competence) {
+            echo '<div>';
+            echo '<h3>' . htmlspecialchars($competence['nom'] ?? $competence['domaine'] ?? 'Non spécifié') . '</h3>';
+            echo '<p>' . nl2br(htmlspecialchars($competence['description'] ?? 'Pas de description')) . '</p>';
+            echo '</div>';
+        }
+        echo '</section>';
+    }
+
+    afficherSection("Languages de Programmation", $data['languages-prog']);
+    afficherSection("Langues", $data['langues']);
+    afficherSection("Compétences Réseau", $data['competences-reseau']);
+    afficherSection("Autres Compétences", $data['autres-competences']);
+    
 } catch (Exception $e) {
-    echo 'Erreur lors du chargement des compétences : ', htmlspecialchars($e->getMessage());
+    echo 'Erreur lors du chargement des compétences : ' . htmlspecialchars($e->getMessage());
 }
 ?>
