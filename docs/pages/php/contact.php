@@ -1,25 +1,42 @@
 <?php
-// Traitement du formulaire après soumission
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require __DIR__ . '/vendor/autoload.php'; // Inclut PHPMailer
+
+$confirmation = '';
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Sécurisation des données
     $nom = htmlspecialchars(trim($_POST['nom']));
     $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
     $objet = htmlspecialchars(trim($_POST['objet']));
     $message = htmlspecialchars(trim($_POST['message']));
 
-    // Vérification des champs requis
     if ($nom && $email && $objet && $message) {
-        // Configuration de l'envoi de l'email
-        $to = "romain.qnm@gmail.com";
-        $subject = "Message de $nom - $objet";
-        $body = "Nom: $nom\nEmail: $email\nObjet: $objet\n\nMessage:\n$message";
-        $headers = "From: $email\r\nReply-To: $email";
+        $mail = new PHPMailer(true);
 
-        // Tentative d'envoi de l'email
-        if (mail($to, $subject, $body, $headers)) {
+        try {
+            // Paramètres du serveur SMTP
+            $mail->isSMTP();
+            $mail->Host = 'smtp.gmail.com'; // Serveur SMTP de Gmail
+            $mail->SMTPAuth = true;
+            $mail->Username = 'ton.email@gmail.com'; // Ton adresse Gmail
+            $mail->Password = 'ton_mot_de_passe'; // Ton mot de passe Gmail ou mot de passe d'application
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+            $mail->Port = 587;
+
+            // Configuration des e-mails
+            $mail->setFrom($email, $nom);
+            $mail->addAddress('romain.qnm@gmail.com'); // Destinataire
+            $mail->addReplyTo($email, $nom);
+
+            $mail->Subject = "Message de $nom - $objet";
+            $mail->Body = "Nom: $nom\nEmail: $email\nObjet: $objet\n\nMessage:\n$message";
+
+            $mail->send();
             $confirmation = "Message envoyé avec succès !";
-        } else {
-            $confirmation = "Une erreur est survenue. Veuillez réessayer.";
+        } catch (Exception $e) {
+            $confirmation = "Erreur lors de l'envoi : " . $mail->ErrorInfo;
         }
     } else {
         $confirmation = "Tous les champs sont obligatoires.";
@@ -27,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 
-<!-- Formulaire de contact -->
+<!-- Formulaire HTML -->
 <form action="#contact" method="POST">
     <label for="nom">Nom :</label>
     <input type="text" id="nom" name="nom" required>
@@ -45,13 +62,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </form>
 
 <!-- Message de confirmation -->
-<?php if (isset($confirmation)): ?>
+<?php if ($confirmation): ?>
     <p class="confirmation"><?= htmlspecialchars($confirmation); ?></p>
 <?php endif; ?>
-
-<!-- Message RGPD -->
-<p class="rgpd-message">
-    Conformément au Règlement Général sur la Protection des Données (RGPD), les informations 
-    renseignées dans ce formulaire ne seront utilisées qu'à des fins de contact. Elles ne seront ni stockées, 
-    ni partagées, ni revendues. Une fois le message envoyé, aucune donnée ne sera conservée.
-</p>

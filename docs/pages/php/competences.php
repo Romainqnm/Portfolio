@@ -1,9 +1,8 @@
 <?php
-require_once __DIR__ . '../../vendor/autoload.php';
 use Symfony\Component\Yaml\Yaml;
 
 try {
-    $yamlFile = realpath(__DIR__ . '../yml/competences.yml');
+    $yamlFile = realpath(__DIR__ . '/../yml/competences.yml');
     if (!$yamlFile) {
         throw new Exception('Fichier YAML introuvable.');
     }

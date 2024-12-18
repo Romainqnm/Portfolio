@@ -20,7 +20,7 @@ Formation:
       diplome: BTS Compabilité & Gestion (non-obtenu)
       lieu: Caen, France
       description : Étude approfondie des principes de gestion comptable, analyse financière et outils bureautiques (Excel, logiciel comptable).
-        Compétences développées :
+        "Compétences développées :"
         - Rigueur dans le traitement des données.
         - Initiation à la gestion d'entreprise et à l'organisation administrative.
     - établissement: CaenSup Sainte Ursule
@@ -29,7 +29,7 @@ Formation:
       lieu: Caen, France
       description: |
         - Développement en Python, PHP, HTML, CSS, JavaScript, et manipulation des bases de données.
-        - Conception, mise en œuvre et maintenance de réseaux informatiques :
+        - "Conception, mise en œuvre et maintenance de réseaux informatiques :"
           * Configuration de serveurs (Windows Server, Linux).
           * Mise en place de VLAN, routage, et surveillance réseau.
           * Sécurisation des systèmes et gestion des droits d'accès.
