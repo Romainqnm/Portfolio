@@ -1,165 +1,141 @@
-/* Reset CSS */
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', Arial, sans-serif;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    background-color: #0b1120;
+    color: #ffffff;
     line-height: 1.6;
-    background: #383838;
-    color: #9889ee;
 }
 
-/* En-tête */
-header {
-    background: #7705c4;
-    color: rgba(65, 65, 65, 0.185);
-    text-align: center;
-    padding: 1rem 2rem;
-    position: fixed;
-    width: 100%;
+/* Header & Navbar */
+.main-header {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px 30px;
+    position: sticky;
     top: 0;
-    left: 0;
-    z-index: 1000;
+    z-index: 10;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-h1 {
-    font-family: 'Poppins', sans-serif;
-    color: #e2ddff; 
-}
-
-header h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-}
-
-nav ul {
+.navbar .nav-links {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 20px;
 }
 
-nav a {
-    color: white;
+.nav-links li a {
+    color: #ffffff;
     text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: 500;
-    transition: color 0.3s;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: color 0.3s, background 0.3s;
 }
 
-nav a:hover {
-    color: #FFA500;
+.nav-links li a:hover {
+    color: #0b1120;
+    background: #ffffff;
+    border-radius: 5px;
 }
 
-/* Section d'accueil */
-.hero {
-    background: url('assets/pictures/romain.jpg') no-repeat center center/cover;
+/* Hero Section */
+.hero-section {
     height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
+    justify-content: space-between;
+    padding: 0 50px;
+    background: radial-gradient(circle, #0b1120, #1a2b48);
 }
 
 .hero-content {
-    display: flex;
-    align-items: center;
-    gap: 3rem;
+    max-width: 50%;
+    text-align: left;
 }
 
-.hero-text {
-    animation: fadeIn 2s ease-in-out;
-}
-
-.hero h2 {
+.hero-content h1 {
     font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
+    margin-bottom: 15px;
+    color: #00d4ff;
 }
 
-.hero p {
-    font-size: 1.5rem;
-    font-weight: 300;
-    margin-bottom: 2rem;
-}
-
-.cta-btn {
-    padding: 0.8rem 2rem;
+.hero-content p {
     font-size: 1.2rem;
-    background: #FFA500;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s ease;
+    color: #ffffff;
+    opacity: 0.8;
 }
 
-.cta-btn:hover {
-    background: #e67e00;
-}
-
-/* Style de l'image */
 .hero-image img {
-    width: 300px;
-    height: 300px;
+    max-width: 350px;
     border-radius: 50%;
-    border: 5px solid white;
-    object-fit: cover;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 5px solid #00d4ff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
-.hero-image img:hover {
-    transform: scale(1.1);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-}
-
-
-.cta-btn {
-    padding: 0.8rem 2rem;
-    font-size: 1.2rem;
-    background: #FFA500;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s ease;
-}
-
-.cta-btn:hover {
-    background: #e67e00;
-}
-
-/* Sections générales */
+/* Sections */
 .section {
-    padding: 4rem 2rem;
+    padding: 60px 20px;
     text-align: center;
+    background: #111827;
+}
+
+.section:nth-child(even) {
+    background: #1a2b48;
 }
 
 .section h2 {
-    font-size: 2.5rem;
-    font-weight: 600;
-    margin-bottom: 2rem;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #00d4ff;
 }
 
-/* Pied de page */
-footer {
-    background: #333;
-    color: white;
+.section p {
+    font-size: 1rem;
+    color: #d1d5db;
+}
+
+/* Footer */
+.footer {
     text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
+    padding: 20px;
+    background: #0b1120;
+    font-size: 0.9rem;
+    color: #d1d5db;
 }
 
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+
+    .hero-content, .hero-image {
+        max-width: 100%;
     }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+}
+
+/* Animation Effects */
+.fade {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease-out;
+}
+
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
 }
