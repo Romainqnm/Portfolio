@@ -77,6 +77,45 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
+/* About Section */
+.about-section {
+    padding: 3rem 5%;
+    background-color: #fff;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-section h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.about-section h3 {
+    font-size: 1.8rem;
+    color: #4A90E2;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.about-section p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.about-section ul {
+    list-style: disc;
+    margin-left: 2rem;
+    font-size: 1.1rem;
+}
+
+.about-section ul li {
+    margin-bottom: 0.5rem;
+}
+
 /* Sections */
 .section {
     padding: 60px 20px;
@@ -99,6 +138,29 @@ body {
     color: #d1d5db;
 }
 
+/* Conteneur de la barre de progression */
+.progress-bar-container {
+    background-color: #e0e0e0; /* Couleur de fond neutre */
+    border-radius: 8px;
+    overflow: hidden;
+    height: 20px;
+    margin: 10px 0;
+}
+
+/* Barre de progression */
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #4caf50, #81c784); /* Dégradé de couleurs */
+    transition: width 0.5s ease-in-out; /* Animation fluide */
+}
+
+/* Texte du niveau */
+.niveau {
+    font-size: 14px;
+    color: #555;
+    margin-top: 5px;
+}
+
 /* Footer */
 .footer {
     text-align: center;
@@ -106,6 +168,75 @@ body {
     background: #0b1120;
     font-size: 0.9rem;
     color: #d1d5db;
+}
+
+.mail {
+    padding: 40px;
+    margin: 20px auto;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background: #4caf50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+.erreurs ul {
+    list-style: none;
+    padding: 0;
+    color: #d32f2f;
+}
+
+.confirmation {
+    color: #4caf50;
+    font-weight: bold;
+    text-align: center;
+}
+
+p {
+    font-weight: bold;
+    color: #333;
 }
 
 /* Responsive Design */
@@ -139,3 +270,6 @@ body {
     opacity: 1;
     transform: translateY(0);
 }
+
+
+

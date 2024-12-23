@@ -4,41 +4,41 @@ languages-prog:
     - nom: PYTHON
       duree-apprentissage: 4
       unite: ans
-      niveau: 7/10
+      niveau: 70
       description: |
         Langage polyvalent utilisé pour le développement de scripts, d'applications web et d'automatisation.
         Compétences clés : manipulation de données.
     - nom: HTML
       duree-apprentissage: 3
       unite: ans
-      niveau: 8/10
+      niveau: 90
       description: |
         Expertise dans la structure et la sémantique des pages web.
         Utilisation avancée pour créer des interfaces accessibles et optimisées.
     - nom: CSS
       duree-apprentissage: 3
       unite: ans
-      niveau: 7/10
+      niveau: 80
       description: |
         Stylisation des interfaces CSS.
         Adaptation responsive pour différents formats d'écrans.
     - nom: JAVASCRIPT
       duree-apprentissage: 4
       unite: mois
-      niveau: 6/10
+      niveau: 65
       description: |
         Création d'interfaces interactives et dynamiques.
         Développement d'applications web côté client.
     - nom: PHP
       duree-apprentissage: 2
       unite: mois
-      niveau: 5/10
+      niveau: 60
       description: |
         Développement de sites web dynamiques avec gestion de bases de données.
     - nom: YAML
       duree-apprentissage: 2
       unite: mois
-      niveau: 9/10
+      niveau: 85
       description: |
         Structuration de données hiérarchiques pour des fichiers de configuration.
 
@@ -46,44 +46,44 @@ langues:
     - nom: Français
       duree-apprentissage: Langue Maternelle
       unite: ans
-      niveau: 10/10
+      niveau: 100
       description: |
         Maîtrise parfaite, tant à l'oral qu'à l'écrit.
     - nom: Anglais
       duree-apprentissage: 9
       unite: ans
-      niveau: 9/10
+      niveau: 90
       description: |
         Niveau avancé (C1) : lecture technique, rédaction.
     - nom: Espagnol
       duree-apprentissage: 5
       unite: ans
-      niveau: 6/10
+      niveau: 60
       description: |
         Niveau intermédiaire : compréhension écrite et orale.
 
 competences-reseau:
     - domaine: Administration Système
-      niveau: 7.5/10
+      niveau: 75
       description: |
         - Configuration de serveurs Linux.
     - domaine: Réseaux Informatiques
-      niveau: 8/10
+      niveau: 70
       description: |
         - Surveillance réseau avec outils comme Wireshark et Netstat.
         - Sécurisation des réseaux via des pare-feu et des politiques d'accès.
 
 autres-competences:
     - nom: Gestion de Projet
-      niveau: 8/10
+      niveau: 80
       description: |
         Utilisation de méthodologies pour organiser et planifier efficacement les tâches.
     - nom: Outils Bureautiques
-      niveau: 9,5/10
+      niveau: 95
       description: |
         Maîtrise d'Excel (formules avancées, tableaux croisés dynamiques) et de Word.
     - nom: Montage Photo/Vidéo
-      niveau: 9/10
+      niveau: 90
       description: |
         Utilisation de divers logiciels de montage photo et vidéo, notamment Adobe Premiere Pro / Photoshop
                 

@@ -11,6 +11,11 @@ realisation-scolaire:
       nom-realisation: Installation & Configuration WEB Apache2
       description: Ma première prodcédure aboutie, elle présente les étapes d'intstallation et de configuration du service apache 2 sur une machine Linux. Elle présente les prérequis à la configuration du service, puis la création de deux site distincs à l'aide de trois méthodes différentes.
 
+    - type-realisation: Procédure
+      matière: SISR
+      nom-realisation: Installation & Configuration d'un service DNS sur Linux avec bind9
+      description: Cette procédure guide l'installation et la configuration d'un service DNS primaire utile à la résolution de noms de domaines en adresses IP et inversement.
+      
     - type-realisation: Portfolio
       matière: Atelier Professionnel - SLAM
       nom-realisation: Création d'un portfolio personnel 
