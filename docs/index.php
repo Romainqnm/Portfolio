@@ -11,7 +11,7 @@
     <script src="assets/js/script.js" defer></script>
 </head>
 <body>
-<header class="main-header">
+<header class="navbar">
     <div class="header-content">
         <!-- Logo et texte à gauche -->
         <div class="logo-container">
@@ -28,17 +28,14 @@
         </div>
     </div>
 
-    <nav class="navbar">
-        <ul class="nav-links">
-            <li><a href="#hero">Accueil</a></li>
-            <li><a href="#competences">Compétences</a></li>
-            <li><a href="#realisations">Réalisations</a></li>
-            <li><a href="#formation">Formation</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+    <ul class="nav-links">
+        <li><a href="#hero">Accueil</a></li>
+        <li><a href="#competences">Compétences</a></li>
+        <li><a href="#realisations">Réalisations</a></li>
+        <li><a href="#formation">Formation</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
 </header>
-
 
     <section id="hero" class="hero-section">
     <div class="hero-content">
@@ -165,6 +162,14 @@
 
 <footer class="footer">
     <p>© 2024 Romain Quoniam - Tous droits réservés</p>
+    <br>
+    <p>
+        <a href="http://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:88px;height:31px"
+        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+        alt="CSS Valide !" />
+    </a>
+</p>
 </footer>
 
 </body>

@@ -94,9 +94,95 @@ body {
 }
 
 /* Navigation Styles */
-.navbar {
-    margin-top: 10px;
+.main-header {
+    position: fixed; /* Fixe tout le header (logo, réseaux sociaux, menu) en haut */
+    top: 0;
+    left: 0;
+    width: 100%; /* Occupe toute la largeur de l'écran */
+    background-color: #333;
+    z-index: 1000; /* Affiche au-dessus du reste de la page */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.portfolio-title {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #00d4ff;
+}
+
+.navbar {
+    margin-top: 10px; /* Donne de l'espace si nécessaire */
+    position: fixed; /* Fixe le menu en haut de la page */
+    top: 0; /* Attaché en haut */
+    left: 0;
+    width: 100%; /* Menu sur toute la largeur */
+    background-color: #333;
+    z-index: 1000;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #0b1120;
+    background: #ffffff;
+    border-radius: 5px;
+}
+
+body {
+    padding-top: 100px; /* Laisse de la place pour le header fixé */
+}
+
+    
 
 .nav-links {
     list-style: none;
@@ -235,11 +321,11 @@ body {
     margin-top: 5px;
 }
 
-.logo-formation {
+.formation-logo {
     max-width: 150px;
     height: auto;
-    margin-bottom: 10px;
     display: block;
+    margin: 10px auto;
 }
 
 .formation {

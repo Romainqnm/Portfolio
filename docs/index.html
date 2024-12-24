@@ -1,6 +1,3 @@
-<?php require_once __DIR__ . '/vendor/autoload.php'; ?>
-
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -75,7 +72,6 @@
         <br>
         <p>Découvrez mes diverses compétences.</p>
         <br>
-        <?php include 'pages/php/competences.php'; ?>
     </section>
 
     <section id="realisations" class="section">
@@ -84,7 +80,6 @@
         <br>
         <p>Explorez mes projets et réalisations.</p>
         <br>
-        <?php include 'pages/php/realisations.php'; ?>
     </section>
 
     <section id="formation" class="section">
@@ -93,7 +88,6 @@
         <br>
         <p>Mon parcours académique et professionnel.</p>
         <br>
-        <?php include 'pages/php/formation.php'; ?>
         <br>
         <br>
         <a href="assets/others/CV SIO.pdf" target="_blank" class="cv-button">Voir mon CV</a>
@@ -144,22 +138,7 @@
         <br> 
         <br>
         <br>
-    </form>
-
-
-
-    <!-- Affichage des messages -->
-<?php if (!empty($erreurs)): ?>
-<div class="erreurs">
-    <ul>
-        <?php foreach ($erreurs as $erreur): ?>
-            <li><?= htmlspecialchars($erreur); ?></li>
-        <?php endforeach; ?>
-    </ul>
-</div>
-<?php elseif (!empty($confirmation)): ?>
-<p class="confirmation"><?= htmlspecialchars($confirmation); ?></p>
-<?php endif; ?>
+ </form>
 
 
 

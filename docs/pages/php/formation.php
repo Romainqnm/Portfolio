@@ -13,7 +13,8 @@ try {
         echo '<p><strong>Diplôme : </strong>' . htmlspecialchars($formation['diplome']) . '</p>';
         echo '<p><strong>Lieu : </strong>' . htmlspecialchars($formation['lieu']) . '</p>';
         echo '<p>' . nl2br(htmlspecialchars($formation['description'])) . '</p>';
-        echo '<img src="' . htmlspecialchars($formation['logo']) . '" alt="Logo de l\'établissement" />';
+        echo '<img src="' . htmlspecialchars($formation['logo']) . '" alt="Logo de l\'établissement" class="formation-logo" />';
+
         echo '</div>';
         echo '<br>';
     }
