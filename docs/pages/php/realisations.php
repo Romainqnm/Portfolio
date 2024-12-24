@@ -1,47 +1,110 @@
-<?php 
+<?php
 use Symfony\Component\Yaml\Yaml;
 
 try {
-    $data = Yaml::parseFile(__DIR__ . '/../yml/realisations.yml');
+    $yamlFile = realpath(__DIR__ . '/../yml/realisations.yml');
+    if (!$yamlFile) {
+        throw new Exception('Fichier YAML introuvable.');
+    }
 
-    // Parcourir les réalisations scolaires
-    if (isset($data['realisation-scolaire']) && is_array($data['realisation-scolaire'])) {
-        echo '<h3>Réalisations Scolaires</h3>';
+    $data = Yaml::parseFile($yamlFile);
+
+    echo "<section id='realisations' class='section'>";
+    echo "<h2>" . htmlspecialchars($data['titre']) . "</h2>";
+
+    // Réalisations Scolaires
+    if (isset($data['realisation-scolaire'])) {
+        echo "<h3>Réalisations Scolaires</h3>";
         foreach ($data['realisation-scolaire'] as $realisation) {
-            echo '<div>';
-            echo '<h4>' . htmlspecialchars($realisation['type-realisation'] ?? 'Type inconnu') . '</h4>';
-            echo '<p><strong>Matière :</strong> ' . htmlspecialchars($realisation['matière'] ?? 'Non spécifiée') . '</p>';
-            echo '<p>' . htmlspecialchars($realisation['nom-realisation'] ?? 'Nom non spécifié') . '</p>';
-            echo '<p>' . htmlspecialchars($realisation['description'] ?? 'Pas de description') . '</p>';
-            echo '</div>';
+            $type = htmlspecialchars($realisation['type-realisation'] ?? 'Type non spécifié');
+            $matiere = htmlspecialchars($realisation['matière'] ?? 'Matière non spécifiée');
+            $nom = htmlspecialchars($realisation['nom-realisation'] ?? 'Nom non spécifié');
+            $description = nl2br(htmlspecialchars($realisation['description'] ?? 'Pas de description'));
+            $link = $realisation['link'] ?? null;
+            $fichier_pdf = $realisation['fichier_pdf'] ?? null;
+
+            echo "<div class='realisation'>";
+            echo "<h4>$nom</h4>";
+            echo "<p><strong>Type :</strong> $type</p>";
+            echo "<p><strong>Matière :</strong> $matiere</p>";
+            echo "<p>$description</p>";
+            echo "<br>";
+
+            // Lien externe
+            if ($link) {
+                echo "<p><a href='$link' target='_blank'>Voir en ligne</a></p>";
+                echo "<br>";
+                echo "<br>";
+
+            }
+
+            // Lien PDF
+            if ($fichier_pdf) {
+                echo "<p><a href='$fichier_pdf' target='_blank'>Télécharger le fichier PDF</a></p>";
+                echo "<br>";
+                echo "<br>";
+
+            }
+
+            echo "</div>";
         }
     }
 
-    // Parcourir les réalisations loisirs
-    if (isset($data['realisation-loisir']) && is_array($data['realisation-loisir'])) {
-        echo '<h3>Réalisations Loisirs</h3>';
+    // Réalisations de Loisir
+    if (isset($data['realisation-loisir'])) {
+        echo "<h3>Réalisations de Loisir</h3>";
         foreach ($data['realisation-loisir'] as $realisation) {
-            echo '<div>';
-            echo '<h4>' . htmlspecialchars($realisation['type-realisation'] ?? 'Type inconnu') . '</h4>';
-            echo '<p><strong>Projet :</strong> ' . htmlspecialchars($realisation['projet'] ?? 'Non spécifié') . '</p>';
-            echo '<p>' . htmlspecialchars($realisation['description'] ?? 'Pas de description') . '</p>';
-            echo '</div>';
+            $type = htmlspecialchars($realisation['type-realisation'] ?? 'Type non spécifié');
+            $projet = htmlspecialchars($realisation['projet'] ?? 'Projet non spécifié');
+            $description = nl2br(htmlspecialchars($realisation['description'] ?? 'Pas de description'));
+            $link = $realisation['link'] ?? null;
+
+            echo "<div class='realisation'>";
+            echo "<h4>$projet</h4>";
+            echo "<p><strong>Type :</strong> $type</p>";
+            echo "<p>$description</p>";
+            echo "<br>";
+
+            // Lien externe
+            if ($link) {
+                echo "<p><a href='$link' target='_blank'>Voir en ligne</a></p>";
+                echo "<br>";
+                echo "<br>";
+
+            }
+
+            echo "</div>";
         }
     }
 
-    // Parcourir les certifications
-    if (isset($data['certifications']) && is_array($data['certifications'])) {
-        echo '<h3>Certifications</h3>';
-        foreach ($data['certifications'] as $certif) {
-            echo '<div>';
-            echo '<h4>' . htmlspecialchars($certif['nom-certif'] ?? 'Nom non spécifié') . '</h4>';
-            echo '<p>' . htmlspecialchars($certif['description'] ?? 'Pas de description') . '</p>';
-            echo '</div>';
+    // Certifications
+    if (isset($data['certifications'])) {
+        echo "<h3>Certifications</h3>";
+        foreach ($data['certifications'] as $certification) {
+            $nom = htmlspecialchars($certification['nom-certif'] ?? 'Nom non spécifié');
+            $description = nl2br(htmlspecialchars($certification['description'] ?? 'Pas de description'));
+            $fichier_pdf = $certification['fichier_pdf'] ?? null;
+
+            echo "<div class='realisation'>";
+            echo "<h4>$nom</h4>";
+            echo "<p>$description</p>";
+            echo "<br>";
+
+
+            // Lien PDF
+            if ($fichier_pdf) {
+                echo "<p><a href='$fichier_pdf' target='_blank'>Télécharger le fichier PDF</a></p>";
+                echo "<br>";
+                echo "<br>";
+
+            }
+
+            echo "</div>";
         }
     }
 
-    echo '</section>';
+    echo "</section>";
 } catch (Exception $e) {
-    echo 'Erreur lors du chargement des réalisations : ', htmlspecialchars($e->getMessage());
+    echo 'Erreur lors du chargement des réalisations : ' . htmlspecialchars($e->getMessage());
 }
 ?>

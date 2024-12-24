@@ -43,6 +43,96 @@ body {
     border-radius: 5px;
 }
 
+/* Style global du header */
+.main-header {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+}
+
+/* Contenu du header (logo + texte + réseaux sociaux) */
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cv-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.cv-button:hover {
+    background-color: #555;
+}
+
+
+/* Logo à gauche */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 40px; /* Ajustez la taille du logo */
+    height: auto;
+    margin-right: 10px;
+}
+
+.portfolio-title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* Réseaux sociaux à droite */
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+/* Style pour la navigation */
+.navbar {
+    margin-top: 10px;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+
 /* Hero Section */
 .hero-section {
     height: 100vh;
@@ -160,6 +250,19 @@ body {
     color: #555;
     margin-top: 5px;
 }
+
+.logo-formation {
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 10px;
+    display: block;
+}
+.formation {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
 
 /* Footer */
 .footer {

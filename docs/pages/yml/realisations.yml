@@ -5,17 +5,20 @@ realisation-scolaire:
       matière: SLAM
       nom-realisation: Repository - Productions réalisées en Bloc 1 - SLAM
       description: Suite de TDs présentés dans les GitHub Pages, réalisés en langages (html,css,js,php,sql,...)
+      link: "https://romainqnm.github.io/bloc1/"
 
     - type-realisation: Procédure
       matière: SISR
       nom-realisation: Installation & Configuration WEB Apache2
       description: Ma première prodcédure aboutie, elle présente les étapes d'intstallation et de configuration du service apache 2 sur une machine Linux. Elle présente les prérequis à la configuration du service, puis la création de deux site distincs à l'aide de trois méthodes différentes.
+      fichier_pdf: "../../../assets/others/sweb.pdf"
 
     - type-realisation: Procédure
       matière: SISR
       nom-realisation: Installation & Configuration d'un service DNS sur Linux avec bind9
       description: Cette procédure guide l'installation et la configuration d'un service DNS primaire utile à la résolution de noms de domaines en adresses IP et inversement.
-      
+      fichier_pdf: "../../../assets/others/dns.pdf"
+
     - type-realisation: Portfolio
       matière: Atelier Professionnel - SLAM
       nom-realisation: Création d'un portfolio personnel 
@@ -25,9 +28,12 @@ realisation-loisir:
     - type-realisation: Production Audiovisuelle
       projet: Montage et Participation à la Production de l'"Empire de l'Ombre"
       description: Projet de fin d'année entre amis, je me suis chargé de la majorité du montage du film "L'Empire de l'Ombre" sur Premiere Pro et After Effects ainsi que une partie du cadrage ou de la gestion des acteurs lors des tournages. Cette expéreience m'a permise de découvrir de nouveaux outils informatiques pour la réalisation du projet.
+      link: "https://youtu.be/g-Ohx4S5x8E"
 
 certifications: 
     - nom-certif: SecNum Académie
       description: Le MOOC SecNumAcadémie est proposé par l'Agence nationale de la sécurité des systèmes d'information (ANSSI). Il s'agit d'une certification initiant les utilisateurs informatiques aux bonnes pratiques et bases informatiques.
+      fichier_pdf: "../../../assets/others/secnum.pdf"
+
     - nom-certif: Projet Voltaire
       description: Certification d'un niveau de français, cette dernière est toujours en progression.

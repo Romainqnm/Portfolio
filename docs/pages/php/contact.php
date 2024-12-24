@@ -62,38 +62,52 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Clé secrète
-    $secret = '6LeVzaMqAAAAAKYaTSov8JIWTYfr-O21NpG9n-Tv';
+    $secret = '6LcltqQqAAAAAMrrMjPFzllZy_Ce0hiHXZraQVot';
     
-    // Vérification du CAPTCHA
-    $response = $_POST['g-recaptcha-response'];
-    $remote_ip = $_SERVER['REMOTE_ADDR'];
-    
-    $url = 'https://www.google.com/recaptcha/api/siteverify';
-    $data = [
-        'secret' => $secret,
-        'response' => $response,
-        'remoteip' => $remote_ip
-    ];
-    
-    // Effectuer la requête POST vers l'API de reCAPTCHA
-    $options = [
-        'http' => [
-            'method'  => 'POST',
-            'header'  => "Content-Type: application/x-www-form-urlencoded\r\n",
-            'content' => http_build_query($data),
-        ],
-    ];
-    $context = stream_context_create($options);
-    $verify = file_get_contents($url, false, $context);
-    $captcha_success = json_decode($verify);
-    
-    if ($captcha_success->success) {
-        // CAPTCHA validé, traitement du formulaire
-        echo "Formulaire envoyé avec succès!";
+    // Vérification que le champ g-recaptcha-response est présent
+    if (isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])) {
+        $response = $_POST['g-recaptcha-response'];
+        $remote_ip = $_SERVER['REMOTE_ADDR'];
+
+        // Requête vers l'API reCAPTCHA
+        $url = 'https://www.google.com/recaptcha/api/siteverify';
+        $data = [
+            'secret' => $secret,
+            'response' => $response,
+            'remoteip' => $remote_ip
+        ];
+
+        // Effectuer la requête POST
+        $options = [
+            'http' => [
+                'method'  => 'POST',
+                'header'  => "Content-Type: application/x-www-form-urlencoded\r\n",
+                'content' => http_build_query($data),
+            ],
+        ];
+        $context = stream_context_create($options);
+        $verify = @file_get_contents($url, false, $context);
+
+        // Vérification si la requête a réussi
+        if ($verify !== false) {
+            $captcha_success = json_decode($verify);
+
+            if ($captcha_success->success) {
+                // CAPTCHA validé, traitement du formulaire
+                echo "Formulaire envoyé avec succès!";
+            } else {
+                // CAPTCHA échoué
+                echo "Erreur CAPTCHA : " . htmlspecialchars($captcha_success->{'error-codes'}[0] ?? 'Inconnue');
+            }
+        } else {
+            // Erreur lors de l'appel à l'API reCAPTCHA
+            echo "Erreur lors de la vérification du CAPTCHA. Veuillez réessayer plus tard.";
+        }
     } else {
-        // CAPTCHA échoué
-        echo "Erreur CAPTCHA. Veuillez réessayer.";
+        // Champ reCAPTCHA manquant
+        echo "Veuillez cocher le CAPTCHA.";
     }
 }
+
 ?>
 
