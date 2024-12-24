@@ -1,6 +1,5 @@
 <?php require_once __DIR__ . '/vendor/autoload.php'; ?>
 
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -64,7 +63,6 @@
         <p>Je suis également intéressé par l'idée d'aller étudier et travailler dans des <strong>pays anglophones</strong>, comme <strong>l'Angleterre</strong> ou le <strong>Canada</strong>. Cela me permettrait d'améliorer mes compétences en langue anglaise tout en découvrant de nouvelles approches et technologies en cybersécurité dans un contexte international.</p>
     </div>
 </section>
-
 
     <section id="competences" class="section">
         <h2>Compétences</h2>

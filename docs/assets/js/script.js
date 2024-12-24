@@ -17,3 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
         observer.observe(section);
     });
 });
+
+window.addEventListener('scroll', () => {
+    document.body.classList.toggle('scrolled', window.scrollY > 50);
+});
