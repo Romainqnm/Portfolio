@@ -167,6 +167,9 @@
         src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
         alt="CSS Valide !" />
     </a>
+    <br>
+    <br>
+    <a href="assets/others/chartegraph.pdf" target="_blank">[Charte Graphique de ce Portfolio]</a>
 </p>
 </footer>
 
