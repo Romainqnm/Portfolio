@@ -12,16 +12,6 @@ body {
     line-height: 1.6;
 }
 
-/* Header & Navbar */
-.main-header {
-    background: rgba(0, 0, 0, 0.7);
-    padding: 15px 30px;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-}
-
 .navbar .nav-links {
     list-style: none;
     display: flex;
@@ -55,6 +45,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 
 .cv-button {
